@@ -24,6 +24,12 @@ class EventPractice extends Component {
         });
     }
 
+    handleKeyPress = (e) => {
+        if(e.key === 'Enter') {
+            this.handleClick();
+        }
+    }
+
     render() {
         return (
             <div>
@@ -45,10 +51,9 @@ class EventPractice extends Component {
                     onChange={ //e 객체는 SyntheticEvent로 웹 브라우저의 네이티브 이벤트를 감싸는 객체이다.
                         this.handleChange
                     }
+                    onKeyPress = {this.handleKeyPress}
                 />
-                <button onClick={
-                    this.handleClick
-                }>확인</button>
+                <button onClick={this.handleClick}>확인</button>
             </div>
         );
     }
