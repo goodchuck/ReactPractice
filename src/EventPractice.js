@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
 class EventPractice extends Component {
+
+    state = {
+        message : ''
+    }
     render() {
         return (
             <div>
@@ -9,9 +13,12 @@ class EventPractice extends Component {
                     type="text"
                     name="message"
                     placeholder="아무거나 입력해 보세요"
+                    value={this.state.message}
                     onChange={ //e 객체는 SyntheticEvent로 웹 브라우저의 네이티브 이벤트를 감싸는 객체이다.
                         (e) => {
-                            console.log(e.target.value);
+                            this.setState({
+                                message : e.target.value
+                            })
                         }
                     }
                 />
