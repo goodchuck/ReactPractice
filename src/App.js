@@ -7,6 +7,7 @@ import Say from './Say';
 import EventPractice from './EventPractice';
 import ValidationSample from './ValidationSample';
 import ScrollBox from './ScrollBox';
+import IterationSample from './IterationSample';
 
 // function App() {
 //   return <MyComponent name="react" favoriteNumber={1}>리액트</MyComponent>;
@@ -15,12 +16,7 @@ import ScrollBox from './ScrollBox';
 class App extends Component {
   render() {
     return (
-      <div>
-        <ScrollBox ref={(ref) => this.ScrollBox = ref}/>
-        <button onClick={() => this.ScrollBox.scrollToBottom()}>
-          맨 밑으로
-        </button>
-      </div>
+      <IterationSample/>
     );
   }
 }
