@@ -17,7 +17,7 @@ const App = () => {
   //     {visible && <Info />}
   //   </div>
   // );
-  return <Counter />;
+  return <Info />;
 };
 
 export default App;
